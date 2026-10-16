@@ -1,0 +1,30 @@
+{
+  "name": "The Matched Rows",
+  "image": "https://api.imd.fun/artifacts/6be5594086d5f4d1d24e91c2e7dfc2f60c9f989e3ce24bf74c5cfaab83f80cd3",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 37
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "CSV Multiplicity"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe compares two stone rows by matching their pigment pebbles."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Reconcile CSV datasets by stable keys"
+    }
+  ]
+}

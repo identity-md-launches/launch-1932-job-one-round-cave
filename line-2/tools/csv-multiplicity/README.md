@@ -26,6 +26,12 @@ unique keys, data correctness, or safety to delete rows. Repeat `--key` for a
 composite key. Omit `--format text` for structured `csv-multiplicity/v1` JSON.
 Reports go to stdout; input errors go to stderr. The tool writes no files.
 
+For a gate that also requires every key to be non-ambiguous, add
+`--fail-on-ambiguous`. It returns exit 1 if either side has a duplicate key or
+an empty key component, even when the complete-row multisets are equal. This
+does not change the report; it makes the safety decision explicit to a shell
+caller.
+
 For each variant, `retained_copies = min(before_count, after_count)`. The two
 surpluses are the excess counts over that minimum. Summary totals obey:
 

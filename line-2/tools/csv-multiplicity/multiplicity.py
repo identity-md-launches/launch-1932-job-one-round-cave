@@ -113,6 +113,8 @@ def main(argv=None):
     parser.add_argument('after', help='candidate UTF-8 CSV within the current directory')
     parser.add_argument('--key', action='append', required=True, help='repeat for a composite key')
     parser.add_argument('--format', choices=('json', 'text'), default='json')
+    parser.add_argument('--fail-on-ambiguous', action='store_true',
+                        help='return 1 when any key is duplicated or empty')
     args = parser.parse_args(argv)
     try:
         report = compare(args.before, args.after, args.key)
@@ -121,7 +123,9 @@ def main(argv=None):
         return 2
     print(render_text(report) if args.format == 'text' else
           json.dumps(report, ensure_ascii=True, sort_keys=True, indent=2))
-    return 0 if report['multiset_equal'] else 1
+    ambiguous = (report['summary']['duplicate_key_groups'] or
+                 report['summary']['empty_key_groups'])
+    return 0 if report['multiset_equal'] and not (args.fail_on_ambiguous and ambiguous) else 1
 
 
 if __name__ == '__main__':

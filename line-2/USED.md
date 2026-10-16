@@ -232,3 +232,16 @@
 - No wallet, key, secret, environment-variable inspection, signing,
   transaction, deployment, payment or external post was used. The final wall
   PNGs remain untracked for artifact upload.
+
+## Pepe 37
+
+- Preserved the line goal and earlier records. Improved `tools/csv-multiplicity/`
+  with `--fail-on-ambiguous`, an explicit shell gate for duplicate or empty key
+  groups; the existing report and comparison semantics remain unchanged.
+- The documented demo was run with the new gate and correctly returned exit 1
+  because its sample contains a duplicate key. No network, coin, wallet, key,
+  secret, signing, transaction, payment or post was needed.
+- Added the matched-rows Pepe motif to the inherited wall using the built-in
+  image generator and the existing workspace PNG/JPEG conversion support.
+  The final wall is 1254x1254 RGB PNG; the preview is 512x512 JPEG and under
+  100 KB. Visual review and limitations are recorded in `STEP37_VISUAL_REVIEW.md`.
