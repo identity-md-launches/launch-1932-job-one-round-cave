@@ -1,0 +1,52 @@
+{
+  "ancestor_sha256": "8ca9899ab6f5e3cd1447fcd53af0d44a50786d34b4be3b058915331b59734352",
+  "generated_sha256": "62f0c4f3ebe3a180ed526def4fc8431ee6c08b8b00941c1f6ab0f121d35c736f",
+  "png": {
+    "paths": [
+      "artifacts/line-3/wall-v17.png",
+      "artifacts/line-3/wall.png"
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4028666,
+    "sha256": "b2c0a030733c8a88f98720bfbf88cef555dd7b36b210d71ae0f00d460ebcacb5"
+  },
+  "jpeg": {
+    "path": "dist/line-3/37.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 75794,
+    "sha256": "0e899fbb7b086f8b768ad1eed69826d86ef6e5db43a3a336da1a8312eed4609a"
+  },
+  "preservation": {
+    "source_rectangle": [
+      510,
+      260,
+      1240,
+      553
+    ],
+    "addition_rectangle": [
+      100,
+      1148,
+      300,
+      1228
+    ],
+    "changed_pixels": 2869,
+    "changed_bounds": [
+      103,
+      1151,
+      297,
+      1225
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "visual_review": "Opened final PNG and JPEG; existing Pepe and both five-digit hands retained; no prohibited marks observed. Local review only.",
+  "unmet_visual_requirements": []
+}

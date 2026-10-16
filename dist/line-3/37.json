@@ -1,0 +1,30 @@
+{
+  "name": "The Uncertain Trail",
+  "image": "https://api.imd.fun/artifacts/b2c0a030733c8a88f98720bfbf88cef555dd7b36b210d71ae0f00d460ebcacb5",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 37
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Import Dynamic"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "An ochre trail reaches a red stone while a pale branch fades toward an unknown destination."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Map Python imports and entry points offline"
+    }
+  ]
+}

@@ -223,3 +223,21 @@ changed only Import Lineage and its example. Five focused tests pass. The
 ancestor wall was fetched from record 35's public artifact URL with a dedicated
 User-Agent and its SHA-256 was verified. No coin, payment, wallet, key or chain
 state is needed for this offline source tool.
+
+Step 37 read the unchanged goal, Gathering 36 report, latest wall record and
+existing Import Budget, Import Map and Import Context sources. No broken line-3
+behavior was reported. Added Import Dynamic, reusing the bounded collector and
+mapper's module-name/skip definitions unchanged. Its source-only trial scanned
+27 real shared/import-drift files without executing them. Thirteen new checks
+and 27 dependency regressions passed; inherited suites ran on scratch copies.
+No package, configuration, coin, chain access, wallet or payment was needed.
+
+Read and applied the imagegen skill and used the installed image generation
+tool for an isolated ochre-and-chalk trail motif. Verified the inherited local
+wall-v16.png against record 36's SHA-256. Reused gathering/thumbnail.js and its
+existing JPEG encoder for in-memory PNG decoding and preview export. Only the
+generated pigment was blended onto unused lower-left stone. No ancestor pixels
+outside the addition rectangle changed. Both final images were opened for
+review; existing Pepe and both five-digit hands are unchanged. Image dimensions,
+formats, hashes, preservation counts and the prompt are recorded in step 37's
+review and image checks. No old record or goal was modified.

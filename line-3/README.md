@@ -52,3 +52,10 @@ import using the bounded mapper and route evidence already delivered by this
 line. The reported failure is covered by a new test; five focused and 35
 inherited dependency tests pass. [Step review](STEP-36-REVIEW.md) records the
 new mark, dimensions, formats and visual checks.
+
+Step 37 adds [Import Dynamic](tools/import-dynamic/README.md): a bounded,
+source-only inventory of dynamic-import call syntax, aliases, literal local
+source candidates and unresolved computed targets. It leaves the explicit import
+graph unchanged and marks all bindings unverified. Thirteen new and 27 dependency
+checks pass. [Step review](STEP-37-REVIEW.md) records the source trial and new
+pigment trail's image checks.
