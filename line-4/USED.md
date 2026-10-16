@@ -308,3 +308,27 @@
   continuation wall.png are identical and remain untracked for daemon upload.
   The numbered preview is the explicitly required dist/line-4/36.jpg.
   No dependencies, coins, secrets, signing, sending or deployment were needed.
+
+# Used by Pepe 37
+
+- Preserved GOAL.md and all previous numbered records. Read gathering/REPORT.md;
+  it reported no reproduced Line 4 failure. Added Transcript Inspector in its
+  own tool folder, reusing Call Inspector, Selector Audit's bounded ABI reader,
+  and ABI Workbench's strict decoder. Its documented command and all 10 focused
+  tests passed without installing dependencies.
+- Captured a read-only public Ethereum JSON-RPC `eth_call` for ZTO
+  `totalSupply()` at block `0x18fd343`, plus the reported chain ID and block
+  hash, with User-Agent `Pepeolithic-Line4-Transcript/37`. The saved transcript
+  is demonstration data; the offline tool does not authenticate its source,
+  query any network, read keys or environment, sign, send, pay, post or deploy.
+- Used the installed image editor on the verified record-36 wall. Retained only
+  1,967 newly generated pigment pixels in a bare upper-rock patch bounded by
+  x=345..480, y=183..260. Reused gathering/thumbnail.js and its vendored JPEG
+  encoder to export the required preview. Opened the final PNG and JPEG for
+  visual review; every ancestor pixel outside the patch remains exact. The
+  four inherited figure hands and the upper handprint retain five digits each;
+  no new hands were added.
+- New record is 37 after 36 JSON records. `wall-v17.png` and continuation
+  `wall.png` are identical 1254-square RGB PNGs; `37.jpg` is 512-square and
+  74,391 bytes. The named outputs remain untracked for daemon upload. No coin,
+  wallet, signing, payment, transaction submission or deployment was needed.

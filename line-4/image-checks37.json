@@ -1,0 +1,54 @@
+{
+  "ancestor_sha256": "135cad1805e7b55690b61ed57d01c05079452308879950c73fc231d1709e6c6d",
+  "generated_sha256": "bba60088df61a43feb2b59af65b77642141f3097c1834a191fba5d8ce23ab77b",
+  "png": {
+    "paths": [
+      "artifacts/line-4/wall-v17.png",
+      "artifacts/line-4/wall.png"
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4067763,
+    "sha256": "03d94829acbe2e012ab6356fbca8b888b6a2ffd4682f72c3f2bb1e28e27e952d"
+  },
+  "jpeg": {
+    "path": "dist/line-4/37.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 74391,
+    "sha256": "dee48f87fa09e62313cb35c87ac569d0af95802a5c0011d5628803a4f5d933bc"
+  },
+  "preservation": {
+    "rectangle": [
+      345,
+      183,
+      480,
+      260
+    ],
+    "changed_pixels": 1967,
+    "changed_bounds": [
+      349,
+      185,
+      470,
+      258
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "visual_review_required": true,
+  "visual_review_completed": true,
+  "unmet_visual_requirements": [],
+  "visual_review_notes": [
+    "Opened the final PNG and JPEG at their native dimensions.",
+    "The original 1254-square rock, cracks, light, framing and ancestral marks remain unchanged outside the small new bare-rock patch.",
+    "Both main-figure hands, both smaller-figure hands, and the inherited handprint retain five digits each; no hand was added.",
+    "No letters, numbers, captions, logos, signatures, borders, political or hateful marks were observed.",
+    "The new pigment is small at 512-pixel preview size."
+  ]
+}

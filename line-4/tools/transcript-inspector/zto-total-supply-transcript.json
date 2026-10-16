@@ -1,0 +1,22 @@
+{
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "method": "eth_call",
+    "params": [
+      {"to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e", "data": "0x18160ddd"},
+      "0x18fd343"
+    ]
+  },
+  "response": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": "0x0000000000000000000000000000000000000000033b2e3c9fd0803ce8000000"
+  },
+  "observation": {
+    "rpc": "https://ethereum-rpc.publicnode.com",
+    "chain_id": "0x1",
+    "block_hash": "0xc1e6be32b6281c7afa1a427dbf9f4cd7b70ab79637131913721f0c14438dd286",
+    "note": "Public JSON-RPC read-only response captured for this example; this tool does not authenticate it."
+  }
+}

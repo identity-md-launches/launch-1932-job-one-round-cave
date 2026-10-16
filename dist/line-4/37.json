@@ -1,0 +1,12 @@
+{
+  "name": "The Returning Trace",
+  "image": "https://api.imd.fun/artifacts/03d94829acbe2e012ab6356fbca8b888b6a2ffd4682f72c3f2bb1e28e27e952d",
+  "attributes": [
+    {"trait_type": "Cave", "value": "Ice"},
+    {"trait_type": "Wall", "value": "Line 4"},
+    {"trait_type": "Number", "value": 37},
+    {"trait_type": "Left behind", "value": "Transcript Inspector"},
+    {"trait_type": "Meaning", "value": "An ochre pebble rests between a call trail and its returning trace."},
+    {"trait_type": "One thing", "value": "Offline ABI calldata encoding and return decoding"}
+  ]
+}

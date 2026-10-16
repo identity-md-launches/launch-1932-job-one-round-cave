@@ -1,0 +1,1 @@
+[{"type":"function","name":"totalSupply","stateMutability":"view","inputs":[],"outputs":[{"name":"supply","type":"uint256"}]}]
