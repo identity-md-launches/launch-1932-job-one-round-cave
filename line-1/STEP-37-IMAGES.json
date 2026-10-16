@@ -1,0 +1,53 @@
+{
+  "number": 37,
+  "ancestor_sha256": "e50793553c8074898573a349bcf8f58c26a68673b7d750688a2480f7f9b7d64d",
+  "png": {
+    "paths": [
+      "artifacts/line-1/wall-v17.png",
+      "artifacts/line-1/wall.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "channels": 3,
+    "sha256": "d462bd632ae9bd2f95023119cc7a4bb2d85834bcbe318ff324fa64e1acf96b11"
+  },
+  "jpeg": {
+    "path": "dist/line-1/37.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 75062
+  },
+  "addition_box": {
+    "x": 1044,
+    "y": 803,
+    "w": 94,
+    "h": 110
+  },
+  "changed_pixels": 2013,
+  "changed_bounds": {
+    "minX": 1050,
+    "minY": 810,
+    "maxX": 1132,
+    "maxY": 905
+  },
+  "changed_pixels_outside_box": 0,
+  "visual_review": {
+    "reviewed": [
+      "full PNG",
+      "512-pixel JPEG"
+    ],
+    "earlier_marks_preserved": true,
+    "text_or_prohibited_symbols_observed": false,
+    "new_hands_or_handprints": 0,
+    "unmet_visual_requirements": [
+      "Inherited simplified hands do not resolve individual digits; five-digit anatomy cannot be certified without redrawing ancestors."
+    ],
+    "limitations": [
+      "New motif is subtle in the thumbnail.",
+      "Local review only; not independent visual approval."
+    ],
+    "mode": "installed built-in image generation, pigment compositing over verified ancestor"
+  }
+}

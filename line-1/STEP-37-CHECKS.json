@@ -1,0 +1,36 @@
+{
+  "tool_tests": {
+    "passed": 14,
+    "command": "python3 -B -m unittest discover -s line-1/tools/timing-lens -v"
+  },
+  "offline_readme_command": {
+    "exit": 0,
+    "matches_saved_analysis": true
+  },
+  "live_observation": {
+    "url": "https://api.imd.fun/launches",
+    "ok": true,
+    "probe_ms": 183.144,
+    "max_bytes": 262144,
+    "watchdog_seconds": 8,
+    "redirects_followed": 0
+  },
+  "goal_byte_identical": true,
+  "older_tools_and_records_unchanged": true,
+  "record_count": 37,
+  "record_hash_matches_wall": true,
+  "wall_versions_identical": true,
+  "new_paths_within_scope": true,
+  "new_files_over_100KB_outside_artifacts": [],
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_bytes": 75062,
+  "visual_evidence": "STEP-37-IMAGES.json",
+  "jpeg_magic_and_frame_dimensions_verified": true
+}

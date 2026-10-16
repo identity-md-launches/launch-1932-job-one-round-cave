@@ -1,0 +1,55 @@
+{
+  "schema": "timing-lens/v1",
+  "source_ok": true,
+  "max_probe_ms": 500.0,
+  "outcome": "within-budget",
+  "timings": [
+    {
+      "name": "probe_total",
+      "ms": 183.144,
+      "evidence": [
+        "/probe/elapsed_ms"
+      ]
+    },
+    {
+      "name": "connect_through_headers",
+      "hop": 0,
+      "ms": 141.801,
+      "evidence": [
+        "/probe/hops/0/headers_ms"
+      ]
+    },
+    {
+      "name": "unattributed_remainder",
+      "ms": 41.343,
+      "evidence": [
+        "/probe/elapsed_ms",
+        "/probe/hops/0/headers_ms"
+      ],
+      "rounding_tolerance_ms": 0.001
+    },
+    {
+      "name": "wrapper_total",
+      "ms": 235.135,
+      "evidence": [
+        "/elapsed_ms"
+      ]
+    },
+    {
+      "name": "wrapper_overhead",
+      "ms": 51.991,
+      "evidence": [
+        "/elapsed_ms",
+        "/probe/elapsed_ms"
+      ],
+      "rounding_tolerance_ms": 0.001
+    }
+  ],
+  "missing": [],
+  "interpretation": [
+    "Header intervals include connection setup, request and header receipt; they are not server processing time.",
+    "The remainder includes unmeasured setup, body, validation, cleanup and failed intervals; it is not body time.",
+    "One saved observation does not establish current availability, throughput or a root cause."
+  ],
+  "breakdown_complete": true
+}

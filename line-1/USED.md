@@ -286,3 +286,20 @@
 - No new coin, dependency installation, wallet, key, signing, transaction,
   payment, POST or deployment was needed. Prior records and their JPEGs remain
   unchanged. New JPEG 36 is generated from the finished wall, not inherited.
+
+## Step 37 — Timing Lens
+
+- Kept GOAL.md unchanged. Read Gathering 36's report; no outstanding Line 1
+  failure was reported. Added a standard-library offline timing interpreter
+  rather than changing earlier tools.
+- Read and reused Failure Map's strict workspace loader and source-health
+  validator. Read Endpoint Sentry's timer boundaries and Deadline Sentry's
+  supervisor before one bounded anonymous real swarm GET. Retained metadata
+  and a body digest only, plus the reproducible analysis. No retry occurred.
+- Verified record 36's ancestor SHA-256 before compositing. The installed image
+  generator supplied pigment grains and a bowl, isolated over previously bare
+  rock; Gathering's already delivered thumbnail decoder and JPEG encoder were
+  used at build time. All pixels outside the addition rectangle are unchanged.
+- No coin, payment, account, installation, environment inspection, secret,
+  wallet, signing, transaction submission, deployment or external write was
+  needed. All earlier records and tools remain unchanged.

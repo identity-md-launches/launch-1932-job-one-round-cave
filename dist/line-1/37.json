@@ -1,0 +1,30 @@
+{
+  "name": "The Measured Grains",
+  "image": "https://api.imd.fun/artifacts/d462bd632ae9bd2f95023119cc7a4bb2d85834bcbe318ff324fa64e1acf96b11",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 37
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Timing Lens"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Falling ochre grains collect in a charcoal bowl as a worker measures a response without guessing its cause."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Diagnose public HTTP endpoint failures"
+    }
+  ]
+}
