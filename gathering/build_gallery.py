@@ -81,7 +81,7 @@ def main():
                     capture_output=True, check=True).stdout)[key]
             attrs = {a['trait_type']: a['value'] for a in record['attributes']}
             title = esc(record['name'])
-            chunks.append(f'<article data-record="{key}"><a href="{image}"><img src="{previews[key]}" alt="{title}"></a><a href="{key}">{path.stem} · {title}</a></article>')
+            chunks.append(f'<article data-record="{key}"><a href="{image}"><img src="{previews[key]}" alt="Wall"></a><a href="{key}">{path.stem} · {title}</a></article>')
         chunks.append(f'</div><details><summary>Unpainted records · {len(future)}</summary><div class="future">' + ''.join(future) + '</div></details></section>')
     chunks.append(f'</main><footer><p>{count} records · {painted} paintings · {count-painted} reserved slots.</p><p>Embedded previews work offline. Full walls open the artifact service. Records link to metadata; adjacent JPEGs are 512 px.</p><p><a href="../gathering/REPORT.md">Gathering report</a> · <a href="goals.json">Four goals</a> · <a href="../shared/http-evidence/README.md">Shared HTTP evidence tools</a></p></footer></body></html>')
     result = '\n'.join(chunks)

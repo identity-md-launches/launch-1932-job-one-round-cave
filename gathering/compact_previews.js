@@ -15,7 +15,7 @@ for (const [key, source] of Object.entries(previews)) {
     maxResolutionInMP: 1, maxMemoryUsageInMB: 16, tolerantDecoding: false
   });
   if (old.width !== old.height) throw new Error('preview must be square');
-  const size = Math.min(24, old.width), data = Buffer.alloc(size * size * 4, 255);
+  const size = Math.min(16, old.width), data = Buffer.alloc(size * size * 4, 255);
   for (let y=0;y<size;y++) for(let x=0;x<size;x++) {
     const x0=Math.floor(x*old.width/size), x1=Math.floor((x+1)*old.width/size);
     const y0=Math.floor(y*old.height/size), y1=Math.floor((y+1)*old.height/size);
@@ -23,6 +23,6 @@ for (const [key, source] of Object.entries(previews)) {
     for(let sy=y0;sy<y1;sy++)for(let sx=x0;sx<x1;sx++)for(let c=0;c<3;c++)sum[c]+=old.data[(sy*old.width+sx)*4+c];
     for(let c=0;c<3;c++)data[(y*size+x)*4+c]=Math.round(sum[c]/count);
   }
-  previews[key]='data:image/jpeg;base64,'+encode({width:size,height:size,data},6).data.toString('base64');
+  previews[key]='data:image/jpeg;base64,'+encode({width:size,height:size,data},4).data.toString('base64');
 }
 process.stdout.write(JSON.stringify(previews));

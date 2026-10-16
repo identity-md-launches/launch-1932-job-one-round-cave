@@ -1,0 +1,657 @@
+{
+  "round": 37,
+  "ok": true,
+  "results": [
+    {
+      "name": "Failure Map real retained healthy report",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-1/tools/failure-map/failure_map.py",
+        "line-1/tools/failure-map/observed-live36.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "output": {
+        "evidence": "/probe/checks",
+        "outcome": "healthy-observation",
+        "phase": "completed checks",
+        "reason": "The captured probe passed its requested checks.",
+        "schema": "failure-map/v1"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "Failure Map real retained HTTP 404",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-1/tools/failure-map/failure_map.py",
+        "line-1/tools/endpoint-sentry/live-failure.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "output": {
+        "evidence": "/checks/0",
+        "outcome": "http-failure",
+        "phase": "HTTP status",
+        "reason": "The captured status did not satisfy the requested status check.",
+        "schema": "failure-map/v1",
+        "status": 404
+      },
+      "stderr": ""
+    },
+    {
+      "name": "Failure Map repaired watchdog phase",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-1/tools/failure-map/failure_map.py",
+        "test/scratch/gathering37/current/watchdog.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "output": {
+        "evidence": "/error/kind",
+        "outcome": "watchdog-failure",
+        "phase": "worker deadline",
+        "reason": "The wrapper recorded a worker failure; no completed probe is available.",
+        "schema": "failure-map/v1"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "Failure Map repaired failed JSON check",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-1/tools/failure-map/failure_map.py",
+        "test/scratch/gathering37/current/check.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "output": {
+        "evidence": "/checks/1",
+        "outcome": "check-failure",
+        "phase": "JSON expectation",
+        "reason": "A requested check failed after a response was captured.",
+        "schema": "failure-map/v1"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "CSV Multiplicity documented duplicate demo",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/csv-multiplicity/multiplicity.py",
+        "line-2/tools/csv-multiplicity/demo-before.csv",
+        "line-2/tools/csv-multiplicity/demo-after.csv",
+        "--key",
+        "item",
+        "--key",
+        "location"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "output": {
+        "columns": [
+          "item",
+          "location",
+          "quantity"
+        ],
+        "format": "csv-multiplicity/v1",
+        "groups": [
+          {
+            "after_count": 0,
+            "after_surplus_copies": 0,
+            "before_count": 1,
+            "before_surplus_copies": 1,
+            "duplicate_key": false,
+            "empty_key_columns": [],
+            "key": {
+              "item": "chalk",
+              "location": "east"
+            },
+            "retained_copies": 0,
+            "variants": [
+              {
+                "after_count": 0,
+                "after_records": [],
+                "after_surplus_copies": 0,
+                "before_count": 1,
+                "before_records": [
+                  6
+                ],
+                "before_surplus_copies": 1,
+                "retained_copies": 0,
+                "values": {
+                  "item": "chalk",
+                  "location": "east",
+                  "quantity": "4"
+                }
+              }
+            ]
+          },
+          {
+            "after_count": 1,
+            "after_surplus_copies": 1,
+            "before_count": 0,
+            "before_surplus_copies": 0,
+            "duplicate_key": false,
+            "empty_key_columns": [],
+            "key": {
+              "item": "charcoal",
+              "location": "west"
+            },
+            "retained_copies": 0,
+            "variants": [
+              {
+                "after_count": 1,
+                "after_records": [
+                  6
+                ],
+                "after_surplus_copies": 1,
+                "before_count": 0,
+                "before_records": [],
+                "before_surplus_copies": 0,
+                "retained_copies": 0,
+                "values": {
+                  "item": "charcoal",
+                  "location": "west",
+                  "quantity": "5"
+                }
+              }
+            ]
+          },
+          {
+            "after_count": 3,
+            "after_surplus_copies": 1,
+            "before_count": 3,
+            "before_surplus_copies": 1,
+            "duplicate_key": true,
+            "empty_key_columns": [],
+            "key": {
+              "item": "flint",
+              "location": "north"
+            },
+            "retained_copies": 2,
+            "variants": [
+              {
+                "after_count": 1,
+                "after_records": [
+                  3
+                ],
+                "after_surplus_copies": 0,
+                "before_count": 2,
+                "before_records": [
+                  2,
+                  3
+                ],
+                "before_surplus_copies": 1,
+                "retained_copies": 1,
+                "values": {
+                  "item": "flint",
+                  "location": "north",
+                  "quantity": "2"
+                }
+              },
+              {
+                "after_count": 1,
+                "after_records": [
+                  2
+                ],
+                "after_surplus_copies": 0,
+                "before_count": 1,
+                "before_records": [
+                  4
+                ],
+                "before_surplus_copies": 0,
+                "retained_copies": 1,
+                "values": {
+                  "item": "flint",
+                  "location": "north",
+                  "quantity": "3"
+                }
+              },
+              {
+                "after_count": 1,
+                "after_records": [
+                  4
+                ],
+                "after_surplus_copies": 1,
+                "before_count": 0,
+                "before_records": [],
+                "before_surplus_copies": 0,
+                "retained_copies": 0,
+                "values": {
+                  "item": "flint",
+                  "location": "north",
+                  "quantity": "4"
+                }
+              }
+            ]
+          },
+          {
+            "after_count": 1,
+            "after_surplus_copies": 0,
+            "before_count": 1,
+            "before_surplus_copies": 0,
+            "duplicate_key": false,
+            "empty_key_columns": [],
+            "key": {
+              "item": "ochre",
+              "location": "south"
+            },
+            "retained_copies": 1,
+            "variants": [
+              {
+                "after_count": 1,
+                "after_records": [
+                  5
+                ],
+                "after_surplus_copies": 0,
+                "before_count": 1,
+                "before_records": [
+                  5
+                ],
+                "before_surplus_copies": 0,
+                "retained_copies": 1,
+                "values": {
+                  "item": "ochre",
+                  "location": "south",
+                  "quantity": "1"
+                }
+              }
+            ]
+          }
+        ],
+        "identity_matching": false,
+        "keys": [
+          "item",
+          "location"
+        ],
+        "multiset_equal": false,
+        "summary": {
+          "after_records": 5,
+          "after_surplus_copies": 2,
+          "before_records": 5,
+          "before_surplus_copies": 2,
+          "duplicate_key_groups": 1,
+          "empty_key_groups": 0,
+          "key_groups": 4,
+          "retained_copies": 3
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "name": "Import Lineage repaired symbol import",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-3/tools/import-lineage/lineage.py",
+        "line-3/tools/import-lineage/examples",
+        "app",
+        "service"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "output": {
+        "source": "app",
+        "target": "service",
+        "reachable": true,
+        "distance": 1,
+        "import_path": [
+          "app",
+          "service"
+        ],
+        "edges": [
+          {
+            "from": "app",
+            "to": "service",
+            "sites": [
+              {
+                "path": "app.py",
+                "line": 1,
+                "target": "service import run"
+              }
+            ]
+          }
+        ],
+        "issues": [],
+        "cycles": [],
+        "dynamic_imports": [],
+        "summary": {
+          "module_count": 3,
+          "local_edge_count": 2,
+          "cycle_count": 0,
+          "issue_count": 0,
+          "entrypoints": []
+        },
+        "scope": "Shortest route in the explicit static local-import graph only. Unreachable does not prove runtime isolation. Conditional imports, dynamic loading, implicit package initialization and external imports are not simulated. Review retained issues, dynamic calls and hashes. Equal endpoints have a zero-edge route, not evidence of a cycle.",
+        "status": "complete",
+        "found": true,
+        "path": [
+          "app",
+          "service"
+        ],
+        "inventory": {
+          "files": 3,
+          "bytes": 132,
+          "entries": 3,
+          "skipped_symlinks": 0,
+          "skipped_directories": 0,
+          "skipped_nonregular": 0,
+          "manifest": [
+            {
+              "path": "app.py",
+              "bytes": 37,
+              "sha256": "e35867347da8c5bba1ad80bdbeb05eba50721f800fef2dc78f300e9721f41b8a"
+            },
+            {
+              "path": "model.py",
+              "bytes": 21,
+              "sha256": "28ed05c12dc3cf9ec232d69b848a7adfe6a993a1288ed9ea22c51dca317bb92e"
+            },
+            {
+              "path": "service.py",
+              "bytes": 74,
+              "sha256": "d0fabae54e6cb0983b72d313cf87ceddd423d749b2f445bdecd7297e376c2051"
+            }
+          ]
+        },
+        "limits": {
+          "files": 1000,
+          "file_bytes": 262144,
+          "total_bytes": 8388608,
+          "entries": 20000,
+          "depth": 64
+        },
+        "collection_scope": "Complete means collection finished within the stated budgets, not that runtime imports are known. Hidden and conventional dependency directories, symlinks and nonregular files are skipped. Explicit AST imports only; parse issues and dynamic calls remain visible. Use a stable source tree. These are input-size limits, not CPU, memory or elapsed-time guarantees."
+      },
+      "stderr": ""
+    },
+    {
+      "name": "Call Inspector constructed ZTO argument",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-4/tools/call-inspector/call_inspector.py",
+        "--abi",
+        "line-4/tools/selector-audit/erc20.json",
+        "--data",
+        "0xa9059cbb000000000000000000000000d782bdea4ef02a0bd391eb9089470c8080f0a68e000000000000000000000000000000000000000000000000000000000000000c"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "output": {
+        "schema": "call-inspector/v1",
+        "calldata_bytes": 68,
+        "function_count": 3,
+        "selector": "0xa9059cbb",
+        "status": "decoded",
+        "candidates": [
+          {
+            "abi_index": 0,
+            "signature": "transfer(address,uint256)"
+          }
+        ],
+        "signature": "transfer(address,uint256)",
+        "abi_index": 0,
+        "arguments": [
+          {
+            "name": "to",
+            "type": "address",
+            "value": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e"
+          },
+          {
+            "name": "amount",
+            "type": "uint256",
+            "value": 12
+          }
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "name": "Calldata Rehearsal unsigned ZTO balance argument",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-4/tools/calldata-rehearsal/calldata_rehearsal.py",
+        "--selector",
+        "0x70a08231",
+        "--types",
+        "address",
+        "--values",
+        "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "output": "0x70a08231000000000000000000000000d782bdea4ef02a0bd391eb9089470c8080f0a68e",
+      "stderr": ""
+    },
+    {
+      "name": "Shared repeated HTTP evidence row review",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "shared/http-evidence/multiplicity_review.py",
+        "shared/http-evidence/demo-multiplicity-before36.csv",
+        "shared/http-evidence/demo-multiplicity-after36.csv"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "output": {
+        "caution": "Retained copies count equal row values. They do not identify physical probe occurrences, establish uptime, or pair changes.",
+        "comparison": {
+          "columns": [
+            "body_sha256",
+            "cache_type",
+            "current_age_seconds",
+            "evaluated_at",
+            "final_url",
+            "freshness_lifetime_seconds",
+            "probe_ok",
+            "remaining_seconds",
+            "source_sha256",
+            "status",
+            "url",
+            "verdict",
+            "warnings"
+          ],
+          "format": "csv-multiplicity/v1",
+          "groups": [
+            {
+              "after_count": 3,
+              "after_surplus_copies": 1,
+              "before_count": 3,
+              "before_surplus_copies": 1,
+              "duplicate_key": true,
+              "empty_key_columns": [],
+              "key": {
+                "url": "https://api.imd.fun/launches"
+              },
+              "retained_copies": 2,
+              "variants": [
+                {
+                  "after_count": 1,
+                  "after_records": [
+                    2
+                  ],
+                  "after_surplus_copies": 0,
+                  "before_count": 2,
+                  "before_records": [
+                    2,
+                    3
+                  ],
+                  "before_surplus_copies": 1,
+                  "retained_copies": 1,
+                  "values": {
+                    "body_sha256": "5ec0acb0fd0b0f0dceb68f8cf55b3ec6e399dcaf3fa928e3b1d35479724f85c4",
+                    "cache_type": "shared",
+                    "current_age_seconds": "1.002042",
+                    "evaluated_at": "2026-10-15T19:03:35.002042+00:00",
+                    "final_url": "https://api.imd.fun/launches",
+                    "freshness_lifetime_seconds": "10",
+                    "probe_ok": "true",
+                    "remaining_seconds": "8.997958",
+                    "source_sha256": "b272199daa64e8d6d15efb3a198c456527e2445c18a806fee9636cfd9494cff5",
+                    "status": "200",
+                    "url": "https://api.imd.fun/launches",
+                    "verdict": "within_freshness_lifetime",
+                    "warnings": "[]"
+                  }
+                },
+                {
+                  "after_count": 2,
+                  "after_records": [
+                    3,
+                    4
+                  ],
+                  "after_surplus_copies": 1,
+                  "before_count": 1,
+                  "before_records": [
+                    4
+                  ],
+                  "before_surplus_copies": 0,
+                  "retained_copies": 1,
+                  "values": {
+                    "body_sha256": "5ec0acb0fd0b0f0dceb68f8cf55b3ec6e399dcaf3fa928e3b1d35479724f85c4",
+                    "cache_type": "shared",
+                    "current_age_seconds": "11.0",
+                    "evaluated_at": "2026-10-15T19:03:45+00:00",
+                    "final_url": "https://api.imd.fun/launches",
+                    "freshness_lifetime_seconds": "10",
+                    "probe_ok": "true",
+                    "remaining_seconds": "0",
+                    "source_sha256": "b272199daa64e8d6d15efb3a198c456527e2445c18a806fee9636cfd9494cff5",
+                    "status": "200",
+                    "url": "https://api.imd.fun/launches",
+                    "verdict": "stale",
+                    "warnings": "[]"
+                  }
+                }
+              ]
+            }
+          ],
+          "identity_matching": false,
+          "keys": [
+            "url"
+          ],
+          "multiset_equal": false,
+          "summary": {
+            "after_records": 3,
+            "after_surplus_copies": 1,
+            "before_records": 3,
+            "before_surplus_copies": 1,
+            "duplicate_key_groups": 1,
+            "empty_key_groups": 0,
+            "key_groups": 1,
+            "retained_copies": 2
+          }
+        },
+        "schema": "http-evidence-multiplicity/v1",
+        "source_schema": "http-evidence CSV"
+      },
+      "stderr": ""
+    },
+    {
+      "name": "Deadline Sentry bounded public GET",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-1/tools/deadline-sentry/deadline_sentry.py",
+        "--deadline",
+        "8",
+        "https://api.imd.fun/launches",
+        "--timeout",
+        "5",
+        "--max-bytes",
+        "262144",
+        "--max-redirects",
+        "0",
+        "--json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "output": {
+        "ok": true,
+        "probe": {
+          "schema": "endpoint-sentry/v1",
+          "url": "https://api.imd.fun/launches",
+          "checked_at": "2026-10-16T05:25:42.815859+00:00",
+          "ok": true,
+          "hops": [
+            {
+              "url": "https://api.imd.fun/launches",
+              "status": 200,
+              "request_sent_at": "2026-10-16T05:25:43.133815+00:00",
+              "headers_received_at": "2026-10-16T05:25:43.458558+00:00",
+              "framing_headers": [
+                [
+                  "content-length",
+                  "126185"
+                ]
+              ],
+              "retry_after": [],
+              "cache_headers": [
+                [
+                  "cache-control",
+                  "public, max-age=10"
+                ],
+                [
+                  "date",
+                  "Fri, 16 Oct 2026 05:25:43 GMT"
+                ],
+                [
+                  "vary",
+                  "accept-encoding"
+                ]
+              ],
+              "headers_ms": 598.798,
+              "content_type": "application/json; charset=utf-8",
+              "content_encoding": "identity",
+              "body_bytes": 126185,
+              "body_sha256": "fdc0715dc94e3a727d0907ce3675d481bdb19ce7d317d9f2a1637bc93ea7d211"
+            }
+          ],
+          "checks": [
+            {
+              "name": "status",
+              "ok": true,
+              "expected": 200,
+              "actual": 200
+            },
+            {
+              "name": "json",
+              "ok": true
+            }
+          ],
+          "limits": {
+            "timeout_seconds": 5.0,
+            "max_bytes": 262144,
+            "max_redirects": 0
+          },
+          "final_url": "https://api.imd.fun/launches",
+          "elapsed_ms": 825.768
+        },
+        "schema": "deadline-sentry/v1",
+        "deadline_seconds": 8.0,
+        "elapsed_ms": 961.535
+      },
+      "stderr": ""
+    }
+  ]
+}

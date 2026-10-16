@@ -282,3 +282,7 @@ No line folder was modified.
   receipt/expiry rows; no extra request is claimed.
 - Four new adapter tests passed. No line folder, dependency, coin or deployed
   contract changed.
+
+## Gathering 37 — reading-order handoff
+
+Copied `line-3/tools/import-order/order.py` to `shared/import-drift/order.py`, changing only `load_budget()` to load the already shared local collector. `order_csv.py` joins that planner to shared `budget.py`/`import_map.py` and Line 2's previously copied `reconcile.py`. No line folder was edited. `test_order_csv.py` adds five behavior checks. `observed-reading37.csv` is an actual static snapshot of this shared worker; comparing it with itself is a reproducible equality demonstration, not evidence of no future changes. Details and command: `shared/import-drift/READING_ORDER.md`.

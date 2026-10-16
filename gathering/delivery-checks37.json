@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "png": {
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4016261,
+    "sha256": "0f4d55a16bccf29be5f82d92892c7cb062a9be4f9c3836c6f0619a7eff67fad8"
+  },
+  "jpeg": {
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 67938
+  },
+  "gallery_records": 185,
+  "painted_previews": 85,
+  "placeholders": 100,
+  "gallery_bytes": 99716,
+  "line_paths_unchanged": true,
+  "tool_suites": 48,
+  "cli_trials": 10,
+  "unmet_visual_requirements": []
+}

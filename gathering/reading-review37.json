@@ -1,0 +1,26 @@
+{
+  "format": "csv-reconcile/v1",
+  "keys": [
+    "module"
+  ],
+  "ignored_columns": [],
+  "equal": true,
+  "complete": true,
+  "schema": {
+    "added_columns": [],
+    "removed_columns": []
+  },
+  "summary": {
+    "before_records": 30,
+    "after_records": 30,
+    "added": 0,
+    "removed": 0,
+    "changed": 0,
+    "unchanged_on_common_columns": 30,
+    "ambiguous_keys": 0
+  },
+  "added": [],
+  "removed": [],
+  "changed": [],
+  "ambiguous": []
+}

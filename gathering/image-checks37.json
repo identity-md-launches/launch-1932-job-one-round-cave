@@ -1,0 +1,50 @@
+{
+  "ancestor_sha256": "5288a5c3aa645cf5b70ed2dd72c9623b18a90b41c59a3d484673bfcfca216068",
+  "generated_sha256": "d17d5badd89f57718eb8c09524b5acfe2fb34f6997bca29300e0fcdf7c1592e8",
+  "png": {
+    "path": "artifacts/gathering/wall-v17.png",
+    "format": "PNG",
+    "mode": "RGB",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "bytes": 4016261,
+    "sha256": "0f4d55a16bccf29be5f82d92892c7cb062a9be4f9c3836c6f0619a7eff67fad8"
+  },
+  "jpeg": {
+    "path": "dist/gathering/37.jpg",
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 67938
+  },
+  "preservation": {
+    "rectangle": [
+      680,
+      697,
+      898,
+      818
+    ],
+    "changed_pixels": 9080,
+    "changed_bounds": [
+      681,
+      698,
+      897,
+      817
+    ],
+    "outside_rectangle_changed_pixels": 0
+  },
+  "model": "built-in image_gen; pigment isolated over verified ancestor",
+  "visual_review_completed": true,
+  "unmet_visual_requirements": [],
+  "review": {
+    "pepe": "Inherited wide mouth and heavy-lidded eyes preserved",
+    "hands": "Both visible hands counted: four fingers and one thumb each; no added hands or stencils",
+    "ancestor_marks": "All existing marks preserved outside a previously bare pigment patch",
+    "prohibited_content": "No letters, numbers, captions, logos, watermarks, borders or prohibited symbols observed",
+    "limitation": "New trail is subtle in the small gallery preview; local review only"
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "selection": {
+    "from": [
+      "cli"
+    ],
+    "mode": "dependency_closure"
+  },
+  "waves": [
+    {
+      "number": 1,
+      "groups": [
+        "model"
+      ]
+    },
+    {
+      "number": 2,
+      "groups": [
+        "engine",
+        "storage"
+      ]
+    },
+    {
+      "number": 3,
+      "groups": [
+        "service"
+      ]
+    },
+    {
+      "number": 4,
+      "groups": [
+        "cli"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "model",
+      "wave": 1,
+      "cyclic": false,
+      "modules": [
+        {
+          "module": "model",
+          "path": "model.py",
+          "entrypoint": false
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "engine",
+      "wave": 2,
+      "cyclic": true,
+      "modules": [
+        {
+          "module": "engine",
+          "path": "engine.py",
+          "entrypoint": false
+        },
+        {
+          "module": "rules",
+          "path": "rules.py",
+          "entrypoint": false
+        }
+      ],
+      "dependencies": [
+        "model"
+      ]
+    },
+    {
+      "id": "storage",
+      "wave": 2,
+      "cyclic": false,
+      "modules": [
+        {
+          "module": "storage",
+          "path": "storage.py",
+          "entrypoint": false
+        }
+      ],
+      "dependencies": [
+        "model"
+      ]
+    },
+    {
+      "id": "service",
+      "wave": 3,
+      "cyclic": false,
+      "modules": [
+        {
+          "module": "service",
+          "path": "service.py",
+          "entrypoint": false
+        }
+      ],
+      "dependencies": [
+        "engine",
+        "storage"
+      ]
+    },
+    {
+      "id": "cli",
+      "wave": 4,
+      "cyclic": false,
+      "modules": [
+        {
+          "module": "cli",
+          "path": "cli.py",
+          "entrypoint": true
+        }
+      ],
+      "dependencies": [
+        "service"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "cli",
+      "to": "service",
+      "from_group": "cli",
+      "to_group": "service",
+      "sites": [
+        {
+          "path": "cli.py",
+          "line": 2,
+          "target": "service"
+        }
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "model",
+      "from_group": "engine",
+      "to_group": "model",
+      "sites": [
+        {
+          "path": "engine.py",
+          "line": 2,
+          "target": "model"
+        }
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "rules",
+      "from_group": "engine",
+      "to_group": "engine",
+      "sites": [
+        {
+          "path": "engine.py",
+          "line": 1,
+          "target": "rules"
+        }
+      ]
+    },
+    {
+      "from": "rules",
+      "to": "engine",
+      "from_group": "engine",
+      "to_group": "engine",
+      "sites": [
+        {
+          "path": "rules.py",
+          "line": 1,
+          "target": "engine"
+        }
+      ]
+    },
+    {
+      "from": "service",
+      "to": "engine",
+      "from_group": "service",
+      "to_group": "engine",
+      "sites": [
+        {
+          "path": "service.py",
+          "line": 1,
+          "target": "engine"
+        }
+      ]
+    },
+    {
+      "from": "service",
+      "to": "storage",
+      "from_group": "service",
+      "to_group": "storage",
+      "sites": [
+        {
+          "path": "service.py",
+          "line": 2,
+          "target": "storage"
+        }
+      ]
+    },
+    {
+      "from": "storage",
+      "to": "model",
+      "from_group": "storage",
+      "to_group": "model",
+      "sites": [
+        {
+          "path": "storage.py",
+          "line": 1,
+          "target": "model"
+        }
+      ]
+    }
+  ],
+  "issues": [],
+  "cycles": [
+    [
+      "engine",
+      "rules"
+    ]
+  ],
+  "dynamic_imports": [],
+  "summary": {
+    "module_count": 7,
+    "local_edge_count": 7,
+    "cycle_count": 1,
+    "issue_count": 0,
+    "entrypoints": [
+      "cli"
+    ],
+    "selected_module_count": 6,
+    "selected_edge_count": 7,
+    "group_count": 5,
+    "wave_count": 4
+  },
+  "scope": "Reading waves describe explicit static local imports, not a Python execution or initialization order. Cyclic modules stay together; their member order is alphabetical only. Missing imports, parse failures, collisions, dynamic loading and implicit package initialization can hide dependencies. Conditional imports are included even when never executed. Warnings cover the entire scanned root, including modules outside a selected closure. Inspect the warnings and source hashes before acting on this plan.",
+  "status": "complete",
+  "inventory": {
+    "files": 7,
+    "bytes": 362,
+    "entries": 7,
+    "skipped_symlinks": 0,
+    "skipped_directories": 0,
+    "skipped_nonregular": 0,
+    "manifest": [
+      {
+        "path": "cli.py",
+        "bytes": 202,
+        "sha256": "43540e1427a7acaa07eefde80b5be417a9b17304c11dc96ab2c5c8211cf494c3"
+      },
+      {
+        "path": "engine.py",
+        "bytes": 26,
+        "sha256": "95b8afcae00d4ca30f4ad2e6e8ef80122a0234c320d1f733f282f19ac0953095"
+      },
+      {
+        "path": "model.py",
+        "bytes": 29,
+        "sha256": "43e38ced196ec959d0afd95eaab8f5b5afd7b6ec2959782517c47ce960ebd543"
+      },
+      {
+        "path": "rules.py",
+        "bytes": 14,
+        "sha256": "dd16775119c2a6e92b11e066e44986782506839127dfbe500f347cbb5a1b8e54"
+      },
+      {
+        "path": "service.py",
+        "bytes": 29,
+        "sha256": "c0e841e337be837c2e4362a9cf91bba39e413c3152d75f12878e36d9d17febce"
+      },
+      {
+        "path": "spare.py",
+        "bytes": 49,
+        "sha256": "30ba988a20ea0caff6f2ccf5709b78fc7865180ba84e4ebe856d4966bd451cea"
+      },
+      {
+        "path": "storage.py",
+        "bytes": 13,
+        "sha256": "86fd157a5062fcf6fc946e0bb846437f43542521b02b0f32ed079db856e54d44"
+      }
+    ]
+  },
+  "limits": {
+    "files": 1000,
+    "file_bytes": 262144,
+    "total_bytes": 8388608,
+    "entries": 20000,
+    "depth": 64
+  },
+  "collection_scope": "Complete means collection finished within the stated budgets, not that runtime imports are known. Hidden and conventional dependency directories, symlinks and nonregular files are skipped. Explicit AST imports only; parse issues and dynamic calls remain visible. Use a stable source tree. These are input-size limits, not CPU, memory or elapsed-time guarantees."
+}

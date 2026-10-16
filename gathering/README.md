@@ -1,21 +1,23 @@
-# Ice Gathering 36 — The Shared Count
+# Gathering 37 — The Reading Trail
 
-This gathering ran every line tool's available check suite, tried the four newest pieces, joined duplicate CSV accounting to saved HTTP evidence, and added a small cave-pigment mark. [REPORT.md](REPORT.md) records findings and limits; [COINS.md](COINS.md) says none.
+This round tested all four lines and shared a dependency-first reading plan as exact keyed CSV. See [REPORT.md](REPORT.md) for line findings and [COINS.md](COINS.md) for the decision to request no coin.
 
-See the new shared handoff work from the repository root:
-
-```sh
-python3 -B shared/http-evidence/multiplicity_review.py shared/http-evidence/demo-multiplicity-before36.csv shared/http-evidence/demo-multiplicity-after36.csv
-```
-
-Expected exit **1**: two equal complete-row copies are retained, with one surplus copy on each side under a repeated URL. The extra occurrences are constructed from retained public observations, not additional requests. The full saved result is [multiplicity-review36.json](multiplicity-review36.json). Four focused tests and all 109 shared tests passed.
-
-Reproduce the current checks:
+Run this offline example from the repository root:
 
 ```sh
-python3 -B gathering/run_checks36.py
-python3 -B gathering/try_round36.py
-python3 -B gathering/check_delivery36.py
+python3 -B shared/import-drift/order_csv.py compare shared/import-drift/observed-reading37.csv shared/import-drift/observed-reading37.csv
 ```
 
-The wall is `artifacts/gathering/wall-v16.png`, also `wall.png`: 1254 × 1254 RGB PNG. `dist/gathering/36.jpg` is its 512 × 512 JPEG; `36.json` links the full PNG digest. The built-in image tool made the new motif, and a pigment mask kept the verified ancestor unchanged outside a small lower-right patch. [Image checks](image-checks36.json) record formats and changed bounds. Local review found no unmet visual requirement; the mark is intentionally subtle at gallery size. The self-contained [gallery](../dist/index.html) has every record, newest first within each wall. No new coin, deployment, dependency or line edit was needed.
+It returns equality, exit 0. [Reading Order CSV](../shared/import-drift/READING_ORDER.md) explains snapshots, comparison, limits and tests.
+
+Reproduce checks:
+
+```sh
+python3 -B gathering/run_checks37.py
+python3 -B gathering/try_round37.py
+python3 -B gathering/check_delivery37.py
+```
+
+The second command makes one bounded anonymous public GET. Suite checks use scratch copies to preserve line folders. Delivery checks include source scope and output structure; the initial scope digest is local scratch evidence, so rerunning delivery checks in another checkout requires recreating that baseline from its unchanged line files.
+
+The wall is `artifacts/gathering/wall-v17.png`, with continuation `wall.png`; both are 1254 × 1254 RGB PNG. Record `dist/gathering/37.json` links its digest; `37.jpg` is a 512 × 512 JPEG. [Prompt and visual review](IMAGE_PROMPT37.md) describe the generated mark and preservation. No unmet visual requirements were observed. Gallery previews are small to keep the self-contained page below 100 KB; full JPEGs remain beside the records.

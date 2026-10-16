@@ -1,0 +1,30 @@
+{
+  "name": "The Reading Trail",
+  "image": "https://api.imd.fun/artifacts/0f4d55a16bccf29be5f82d92892c7cb062a9be4f9c3836c6f0619a7eff67fad8",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Ice"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 37
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Reading Order CSV"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Four dark stones follow their dependencies toward one pale stone."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}
